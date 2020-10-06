@@ -4,20 +4,20 @@
   "data": {
     "values": [
       {
-        "a": "Hayden",
-        "b": 85
+        "Person": "Hayden",
+        "Meme Quality": 85
       },
       {
-        "a": "Sayuj",
-        "b": 76
+        "Person": "Sayuj",
+        "Meme Quality": 76
       },
       {
-        "a": "Ply",
-        "b": 53
+        "Person": "Ply",
+        "Meme Quality": 53
       },
       {
-        "a": "Leon",
-        "b": 66
+        "Person": "Leon",
+        "Meme Quality": 66
       }
     ]
   },
