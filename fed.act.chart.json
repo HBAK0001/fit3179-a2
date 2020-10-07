@@ -1,7 +1,7 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "width": 800,
-    "height": 500,
+    "width": 500,
+    "height": 300,
     "data": {
       "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-act-2018.geojson",
       "format": {"property": "features"}
