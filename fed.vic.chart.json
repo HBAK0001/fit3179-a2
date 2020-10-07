@@ -3,7 +3,7 @@
     "width": 800,
     "height": 500,
     "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed_vic_2018.geojson",
+      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-vic-2018.geojson",
       "format": {"property": "features"}
     },
     "projection": {"type": "mercator"},
