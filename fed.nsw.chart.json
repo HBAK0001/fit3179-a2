@@ -13,5 +13,6 @@
         "field": "properties.Elect_div",
         "type": "nominal"
       }
-    }
+    },
+    "autosize": "fit-x"
   }
