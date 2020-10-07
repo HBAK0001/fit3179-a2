@@ -2,7 +2,10 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "description": "A simple bar chart with embedded data.",
   "data": {
-    "url": "https://HBAK0001.github.io/fit3179-a2/geoJSON/fed/fed_aus_2019.json"
+    "url": "https://HBAK0001.github.io/fit3179-a2/geoJSON/fed/fed_aus_2019.json",
+    "format": {
+      "property": "features"
+    }
   },
   "projection": {
     "type": "mercator"
