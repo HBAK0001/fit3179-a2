@@ -1,0 +1,14 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple bar chart with embedded data.",
+  "data": {
+    "url": "geoJSON/fed/fed_aus_2019.json"
+  },
+  "projection": {
+    "type": "mercator"
+  },
+  "mark": "geoshape",
+  "config": {},
+  "width": 300,
+  "height": 300
+}
