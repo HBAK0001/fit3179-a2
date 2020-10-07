@@ -35,5 +35,6 @@
       "type": "quantitative"
     }
   },
-  "config": {}
+  "config": {},
+  "width": 500
 }
