@@ -3,7 +3,7 @@
     "width": 500,
     "height": 300,
     "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nt-2020-clean.geojson",
+      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nat-2018.geojson",
       "format": {"property": "features"}
     },
     "projection": {"type": "mercator"},
