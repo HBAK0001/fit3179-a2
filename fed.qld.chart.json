@@ -1,0 +1,17 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": 800,
+    "height": 500,
+    "data": {
+      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-qld-2018.geojson",
+      "format": {"property": "features"}
+    },
+    "projection": {"type": "mercator"},
+    "mark": "geoshape",
+    "encoding": {
+      "color": {
+        "field": "properties.Elect_div",
+        "type": "nominal"
+      }
+    }
+  }
