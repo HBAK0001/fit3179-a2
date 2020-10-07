@@ -1,17 +1,30 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-  "description": "A simple bar chart with embedded data.",
+  "width": 500,
+  "height": 300,
   "data": {
-    "url": "https://HBAK0001.github.io/fit3179-a2/geoJSON/fed/fed_aus_2019.json",
-    "format": {
-      "property": "features"
+    "url": "https://opendata.arcgis.com/datasets/686603e943f948acaa13fb5d2b0f1275_3.geojson",
+    "format": {"property": "features"}
+  },
+  "transform": [
+    {
+      "filter": {
+        "field": "properties.lad16nm",
+        "oneOf": [
+          "Bolton",
+          "Bury",
+          "Manchester",
+          "Oldham",
+          "Rochdale",
+          "Salford",
+          "Stockport",
+          "Tameside",
+          "Trafford",
+          "Wigan"
+        ]
+      }
     }
-  },
-  "projection": {
-    "type": "mercator"
-  },
-  "mark": "geoshape",
-  "config": {},
-  "width": 300,
-  "height": 300
+  ],
+  "projection": {"type": "mercator"},
+  "mark": "geoshape"
 }
