@@ -3,7 +3,7 @@
     "width": 500,
     "height": 300,
     "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nsw-2016.geojson",
+      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nsw-2016-clean.geojson",
       "format": {"property": "features"}
     },
     "projection": {"type": "mercator"},
