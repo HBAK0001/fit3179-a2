@@ -31,7 +31,7 @@
     {
       "lookup": "DivisionNm",
       "from": {
-        "key": "properties.Sortname",
+        "key": "properties.Elect_div",
         "data": {
           "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-qld-2018.geojson",
           "format": {"property": "features"}
