@@ -50,6 +50,17 @@
     },
     {
       "filter": "datum.TotalVotes == datum.maxVotes"
+    },
+    {
+      "filter": {
+        "field": "properties.Sortname",
+        "oneOf": [
+          "Mallee", "Wannon",  "Nicholls", "Bendigo",
+          "Mcewen", "Ballarat", "Corangamite",
+          "Indi", "Gippsland", "Monash", "Casey", "La Trobe",
+          "Gorton", "Lalor", "Flinders"
+        ]
+      }
     }
   ]
 }
