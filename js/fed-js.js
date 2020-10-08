@@ -40,3 +40,8 @@ vegaEmbed('#vis-nt', spec_nt).then(function(result) {
 var spec_act = "https://HBAK0001.github.io/fit3179-a2/fed.act.chart.json";
 vegaEmbed('#vis-act', spec_act).then(function(result) {
 }).catch(console.error);
+
+const states = ["vic", "nsw"]
+states.forEach(function (item, index) {
+    changeMap("fed", item, "regional")
+})
