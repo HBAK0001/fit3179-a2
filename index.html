@@ -17,7 +17,16 @@
         <div class="pure-g">
             <div class="pure-u-1-2">
                 <p>Victoria</p>
-                <div id="vis-vic"></div>
+                <div class="pure-button-group" role="group" aria-label="...">
+                    <button class="pure-button pure-button-active" onclick="changeMap('fed','vic','regional')">Regional</button>
+                    <button class="pure-button" onclick="changeMap('fed','vic','metro')">Metropolitan</button>
+                </div>
+                <div id="vic-regional" class="vic-map">
+                    <div id="vis-vic"></div>
+                </div>
+                <div id="vic-metro" class="vic-map" display="none">
+                    <div id="vis-vic-metro"></div>
+                </div>
             </div>
             <div class="pure-u-1-2">
                 <p>New South Wales</p>
@@ -49,31 +58,8 @@
             </div>
         </div>
         <script type="text/javascript">
-            var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.vic.chart.json";
-            vegaEmbed('#vis-vic', spec_vic).then(function(result) {
-            }).catch(console.error);
-            var spec_nsw = "https://HBAK0001.github.io/fit3179-a2/fed.nsw.chart.json";
-            vegaEmbed('#vis-nsw', spec_nsw).then(function(result) {
-            }).catch(console.error);
-            var spec_wa = "https://HBAK0001.github.io/fit3179-a2/fed.wa.chart.json";
-            vegaEmbed('#vis-wa', spec_wa).then(function(result) {
-            }).catch(console.error);
-            var spec_qld = "https://HBAK0001.github.io/fit3179-a2/fed.qld.chart.json";
-            vegaEmbed('#vis-qld', spec_qld).then(function(result) {
-            }).catch(console.error);
-
-            var spec_sa = "https://HBAK0001.github.io/fit3179-a2/fed.sa.chart.json";
-            vegaEmbed('#vis-sa', spec_sa).then(function(result) {
-            }).catch(console.error);
-            var spec_tas = "https://HBAK0001.github.io/fit3179-a2/fed.tas.chart.json";
-            vegaEmbed('#vis-tas', spec_tas).then(function(result) {
-            }).catch(console.error);
-            var spec_nt = "https://HBAK0001.github.io/fit3179-a2/fed.nt.chart.json";
-            vegaEmbed('#vis-nt', spec_nt).then(function(result) {
-            }).catch(console.error);
-            var spec_act = "https://HBAK0001.github.io/fit3179-a2/fed.act.chart.json";
-            vegaEmbed('#vis-act', spec_act).then(function(result) {
-            }).catch(console.error);
+            
         </script>
+        <script src="js/fed-js.js"></script>
     </body>
 </html>
