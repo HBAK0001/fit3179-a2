@@ -1,18 +1,55 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "width": 500,
-    "height": 300,
-    "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-sa-2018.geojson",
-      "format": {"property": "features"}
-    },
-    "projection": {"type": "mercator"},
-    "mark": "geoshape",
-    "encoding": {
-      "color": {
-        "field": "properties.Elect_div",
-        "type": "nominal"
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-2-2019.csv"
+  },
+  "mark": "geoshape",
+  "encoding": {
+    "color": {
+      "field": "PartyNm",
+      "type": "nominal",
+      "scale": {
+        "range": [
+          "red",
+          "red",
+          "orange",
+          "gray",
+          "darkred",
+          "red",
+          "blue",
+          "blue",
+          "lightgreen",
+          "darkgreen"
+        ]
+      }
+    }
+  },
+  "autosize": "fit-x",
+  "transform": [
+    {
+      "lookup": "DivisionNm",
+      "from": {
+        "key": "properties.Sortname",
+        "data": {
+          "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-sa-2018.geojson",
+          "format": {"property": "features"}
+        },
+        "fields": ["geometry", "properties", "type"]
       }
     },
-    "autosize": "fit-x"
-  }
+    {
+      "joinaggregate": [
+        {
+          "op": "max",
+          "field": "TotalVotes",
+          "as": "maxVotes"
+        }],
+      "groupby": ["DivisionNm"]
+    },
+    {
+      "filter": "datum.TotalVotes == datum.maxVotes"
+    }
+  ]
+}
