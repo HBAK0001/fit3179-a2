@@ -13,14 +13,8 @@
       "scale": {
         "range": [
           "red",
-          "red",
-          "orange",
           "gray",
-          "darkred",
-          "red",
           "blue",
-          "blue",
-          "lightgreen",
           "darkgreen"
         ]
       }
@@ -56,9 +50,9 @@
         "field": "properties.Sortname",
         "oneOf": [
           "Mallee", "Wannon",  "Nicholls", "Bendigo",
-          "Mcewen", "Ballarat", "Corangamite",
+          "McEwen", "Ballarat", "Corangamite",
           "Indi", "Gippsland", "Monash", "Casey", "La Trobe",
-          "Gorton", "Lalor", "Flinders"
+          "Gorton", "Lalor", "Flinders", "Corio"
         ]
       }
     }
