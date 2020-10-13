@@ -26,7 +26,7 @@
       "from": {
         "key": "properties.Sortname",
         "data": {
-          "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-tas-2017-min-topo.json",
+          "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-tas-2017-min.geojson",
           "format": {"property": "features"}
         },
         "fields": ["geometry", "properties", "type"]
