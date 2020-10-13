@@ -12,10 +12,10 @@
       "type": "nominal",
       "scale": {
         "range": [
-          "#E36632",
+          "#E65015",
           "gray",
-          "#578BFF",
-          "#35b047"
+          "#2A7CFF",
+          "#1CB33A"
         ]
       }
     }
