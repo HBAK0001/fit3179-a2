@@ -55,6 +55,12 @@
           "Gorton", "Lalor", "Corio", "Flinders"
         ]
       }
+    },
+    {
+      "filter": {
+        "field": "StateAb",
+        "equal": "VIC"
+      }
     }
   ]
 }

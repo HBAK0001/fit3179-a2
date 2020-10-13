@@ -55,6 +55,12 @@
           "Calwell", "Maribyrnong", "Fraser"
         ]
       }
+    },
+    {
+      "filter": {
+        "field": "StateAb",
+        "equal": "VIC"
+      }
     }
   ]
 }

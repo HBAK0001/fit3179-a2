@@ -50,6 +50,12 @@
     },
     {
       "filter": "datum.TotalVotes == datum.maxVotes"
+    },
+    {
+      "filter": {
+        "field": "StateAb",
+        "equal": "SA"
+      }
     }
   ]
 }
