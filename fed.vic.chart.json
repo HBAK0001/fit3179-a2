@@ -51,8 +51,8 @@
         "oneOf": [
           "Mallee", "Wannon",  "Nicholls", "Bendigo",
           "McEwen", "Ballarat", "Corangamite",
-          "Indi", "Gippsland", "Monash", "Casey", "La Trobe",
-          "Gorton", "Lalor", "Corio", "Flinders"
+          "Indi", "Gippsland", "Monash", "Casey", 
+          "La Trobe", "Corio", "Flinders"
         ]
       }
     },
