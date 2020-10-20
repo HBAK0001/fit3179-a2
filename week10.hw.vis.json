@@ -1,0 +1,80 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "width": 500,
+    "height": 300,
+    "data": {
+      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-2-2019.csv"
+    },
+    "encoding": {
+      "x":{
+        "field": "DivisionNm",
+        "type": "nominal"
+      },
+      "y": {
+        "field": "TotalVotes",
+        "type": "quantitative",
+        "stack": "normalize"
+      }
+    },
+    "transform": [
+      {
+        "filter": {
+          "field": "StateAb",
+          "equal": "VIC"
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "color": {
+            "field": "PartyNm",
+            "type": "nominal",
+            "scale": {
+              "range": [
+                "#E41A1C",
+                "gray",
+                "#387EB8",
+                "#A6D854",
+                "#1B9E77"
+              ]
+            }
+          },
+          "tooltip": [
+            {"field": "DivisionNm", "type": "nominal"},
+            {"field": "Elected", "type": "nominal"},
+            {"field": "PartyNm", "type": "nominal"},
+            {"field": "TotalVotes", "type": "quantitative"}
+          ],
+          "opacity": {
+            "condition": {"selection": "continent_highlight", "value": 1},
+            "value": 0.2
+          }
+        }, 
+      "selection": {
+        "continent_highlight": {
+        "type": "multi",
+        "fields": ["PartyNm"],
+        "bind": "legend"
+      }
+    }
+      },
+      {
+        "mark": {
+          "type": "text",
+          "baseline": "bottom"
+        },
+        "encoding": {
+          "text": {"field": "BallotPosition", "type": "quantitative"},
+          "opacity": {
+            "condition": {
+              "test": "datum['Elected'] == 'Y'",
+              "value": 1
+            },
+            "value": 0
+          }
+        }
+      }
+    ]
+  }
