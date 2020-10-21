@@ -16,51 +16,17 @@
         <h1>Hayden's Web Page</h1>
         <h2>Testing Charts</h2>
         <div class="pure-g">
-            <div class="pure-u-1-2">
-                <p>Victoria</p>
-                <div class="pure-button-group" role="group" aria-label="...">
-                    <button class="pure-button pure-button-active" onclick="changeMap('fed','vic','regional')">Regional</button>
-                    <button class="pure-button" onclick="changeMap('fed','vic','metro')">Metropolitan</button>
-                </div>
-                <div id="vic-regional" class="vic-map">
-                    <div id="vis-vic"></div>
-                </div>
-                <div id="vic-metro" class="vic-map" display="none">
-                    <div id="vis-vic-metro"></div>
-                </div>
+            <div class="pure-u-1-1">
+                <div id="vis-main"></div>
             </div>
-            <div class="pure-u-1-2">
-                <p>New South Wales</p>
-                <div id="vis-nsw"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>Queensland</p>
-                <div id="vis-qld"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>Western Australia</p>
-                <div id="vis-wa"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>South Australia</p>
-                <div id="vis-sa"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>Tasmania</p>
-                <div id="vis-tas"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>Northern Territory</p>
-                <div id="vis-nt"></div>
-            </div>
-            <div class="pure-u-1-2">
-                <p>Australian Capital Territory</p>
-                <div id="vis-act"></div>
+            <div class="pure-u-1-1">
+                
             </div>
         </div>
         <script type="text/javascript">
-            
+            var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
+            vegaEmbed('#vis-main', spec_vic).then(function(result) {
+            }).catch(console.error);
         </script>
-        <script src="js/fed-js.js"></script>
     </body>
 </html>

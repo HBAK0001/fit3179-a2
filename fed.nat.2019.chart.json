@@ -1,0 +1,190 @@
+{
+    "$schema": "https://vega.github.io/schema/vega/v5.json",
+    "description": "An interactive world map supporting pan and zoom.",
+    "width": 900,
+    "height": 500,
+    "autosize": "none",
+  
+    "signals": [
+      { "name": "tx", "update": "width / 2" },
+      { "name": "ty", "update": "height / 2" },
+      {
+        "name": "scale",
+        "value": 580,
+        "on": [{
+          "events": {"type": "wheel", "consume": true},
+          "update": "clamp(scale * pow(1.0005, -event.deltaY * pow(16, event.deltaMode)), 580, 25000)"
+        }]
+      },
+      {
+        "name": "angles",
+        "value": [0, 0],
+        "on": [{
+          "events": "mousedown",
+          "update": "[rotateX, centerY]"
+        }]
+      },
+      {
+        "name": "cloned",
+        "value": null,
+        "on": [{
+          "events": "mousedown",
+          "update": "copy('projection')"
+        }]
+      },
+      {
+        "name": "start",
+        "value": null,
+        "on": [{
+          "events": "mousedown",
+          "update": "invert(cloned, xy())"
+        }]
+      },
+      {
+        "name": "drag", "value": null,
+        "on": [{
+          "events": "[mousedown, window:mouseup] > window:mousemove",
+          "update": "invert(cloned, xy())"
+        }]
+      },
+      {
+        "name": "delta", "value": null,
+        "on": [{
+          "events": {"signal": "drag"},
+          "update": "[drag[0] - start[0], start[1] - drag[1]]"
+        }]
+      },
+      {
+        "name": "rotateX", "value": -135,
+        "on": [{
+          "events": {"signal": "delta"},
+          "update": "clamp(angles[0] + delta[0], -155, -115)"
+        }]
+      },
+      {
+        "name": "centerY", "value": -31,
+        "on": [{
+          "events": {"signal": "delta"},
+          "update": "clamp(angles[1] + delta[1], -41, -12)"
+        }]
+      }
+    ],
+  
+    "projections": [
+      {
+        "name": "projection",
+        "type": "azimuthalEqualArea",
+        "scale": {"signal": "scale"},
+        "rotate": [{"signal": "rotateX"}, 0, 0],
+        "center": [0, {"signal": "centerY"}],
+        "translate": [{"signal": "tx"}, {"signal": "ty"}]
+      }
+    ],
+  
+    "data": [
+      {
+        "name": "results",
+        "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-2-2019.csv",
+        "format": {"type": "csv"},
+        "transform": [
+          {
+            "type": "filter",
+            "expr": "datum.Elected == 'Y'"
+          }
+        ]
+      },
+      {
+        "name": "world",
+        "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nat-2018-topo.json",
+        "format": {
+          "type": "topojson",
+          "feature": "fed-nat-2018"
+        },
+        "transform": [
+          {
+            "type": "lookup",
+            "from": "results",
+            "key": "DivisionNm",
+            "fields": ["properties.Sortname"],
+            "values": ["StateAb", "Surname", "GivenNm", "PartyAb", "PartyNm", "TotalVotes"]
+          }
+        ]
+      },
+      {
+        "name": "graticule",
+        "transform": [
+          { "type": "graticule", "step": [15, 15] }
+        ]
+      }
+    ],
+    "scales": [
+      {
+        "name": "parties",
+        "type": "ordinal",
+        "range": [
+          "red",
+          "red",
+          "blue",
+          "darkred",
+          "blue",
+          "orange",
+          "gray",
+          "darkgreen",
+          "lightgreen",
+          "red"
+        ]
+      }
+    ],
+    "legends": [
+      {
+        "fill": "parties",
+        "orient": "top-left",
+        "title": "Elected Party",
+        "encode": {
+          "symbols": {
+            "update": {
+              "shape": {"value": "square"},
+              "stroke": {"value": "#ccc"},
+              "strokeWidth": {"value": 0.2}
+            }
+          }
+        }
+      }
+    ],
+    "marks": [
+      {
+        "type": "shape",
+        "from": {"data": "graticule"},
+        "encode": {
+          "enter": {
+            "strokeWidth": {"value": 1},
+            "stroke": {"value": "#ddd"},
+            "fill": {"value": null}
+          }
+        },
+        "transform": [
+          { "type": "geoshape", "projection": "projection" }
+        ]
+      },
+      {
+        "type": "shape",
+        "from": {"data": "world"},
+        "encode": {
+          "enter": {
+            "strokeWidth": {"value": 0.5},
+            "stroke": {"value": "#FFF"},
+            "fill": {"scale": "parties",
+                "field": "PartyNm"},
+            "tooltip": [
+              {
+                "signal": "{'Division Name': datum.properties.Sortname, 'Party Name': datum['PartyNm']}"
+              }
+            ]
+          }
+        },
+        "transform": [
+          { "type": "geoshape", "projection": "projection" }
+        ]
+      }
+    ]
+  }
