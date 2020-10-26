@@ -16,11 +16,11 @@ var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
 */
 function displayElectorateInfo(item) {
     if (bar_spec !== null){
-        let bar_spec_filtered = bar_spec;
+        let bar_spec_filtered = JSON.parse(JSON.stringify(bar_spec));
         if (item !== null){
             let division = item.datum.properties.Sortname;
-            bar_spec_filtered.transform.push({
-                "filter": "datum.DivisionNm == " + division
+            bar_spec_filtered.transform.unshift({
+                "filter": "datum.DivisionNm == '" + division + "'"
             })
         }
         vegaEmbed('#vis-bar', bar_spec_filtered).then(function (result) {
