@@ -1,3 +1,5 @@
+var bar_json = null;
+
 /*
     Display Main Map Visualisation
 */
@@ -22,3 +24,12 @@ function displayElectorateInfo(item) {
         console.log(division);
     }
 }
+
+/* 
+    Main initialisation function
+*/
+async function main(){
+    
+}
+
+main()
