@@ -22,6 +22,10 @@ function displayElectorateInfo(item) {
             bar_spec_filtered.transform.unshift({
                 "filter": "datum.DivisionNm == '" + division + "'"
             })
+            document.getElementById("electorate-title").textContent = "Division Overview: " + division;
+        }
+        else {
+            document.getElementById("electorate-title").textContent = "National Overview";
         }
         vegaEmbed('#vis-bar', bar_spec_filtered).then(function (result) {
 
