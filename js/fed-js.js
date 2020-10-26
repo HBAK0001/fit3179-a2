@@ -8,7 +8,9 @@ var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
             vegaEmbed('#vis-main', spec_vic).then(function(result) {
                 result.view.addEventListener('click', function(event, item){
                     displayElectorateInfo(item);
+                    
                 });
+                console.log(result)
             }).catch(console.error);
 
 /*
