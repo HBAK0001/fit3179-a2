@@ -11,6 +11,7 @@ var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
                     
                 });
                 console.log(result)
+                window.dispatchEvent(new Event('resize'));
             }).catch(console.error);
 
 /*
