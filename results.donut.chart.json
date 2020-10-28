@@ -1,0 +1,26 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "A simple donut chart with embedded data.",
+    "data": {
+      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-2pp-2019.csv"
+    },
+    "transform": [
+      {
+        "fold": ["Liberal/National Coalition", "Australian Labor Party"],
+        "as": ["Party", "Percentage"]
+      }
+    ],
+    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+    "encoding": {
+      "theta": {
+        "field": "Percentage",
+        "type": "quantitative"
+      },
+      "color": {"field": "Party", "type": "nominal",
+      "scale": {
+        "domain": ["Australian Labor Party", "Liberal/National Coalition"],
+        "range": ["red", "blue"]
+      }}
+    },
+    "view": {"stroke": null}
+  }

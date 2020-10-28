@@ -1,4 +1,5 @@
 var bar_spec = null;
+var donut_spec = null;
 
 /*
     Display Main Map Visualisation
@@ -30,7 +31,22 @@ function displayElectorateInfo(item) {
         else {
             document.getElementById("electorate-title").textContent = "National Overview";
         }
+        // Embed Chart on Page
         vegaEmbed('#vis-bar', bar_spec_filtered).then(function (result) {
+
+        });
+    }
+    if (donut_spec !== null) {
+        let donut_spec_filtered = JSON.parse(JSON.stringify(donut_spec));
+        if (item !== null){
+            let division = item.datum.properties.Sortname;
+            console.log(division);
+            donut_spec_filtered.transform.unshift({
+                "filter": "datum.DivisionNm == \"" + division.replace("'", "\'") + "\""
+            })
+        }
+        // Embed Chart on Page
+        vegaEmbed('#vis-donut', donut_spec_filtered).then(function (result) {
 
         });
     }
@@ -41,6 +57,7 @@ function displayElectorateInfo(item) {
 */
 async function main(){
     bar_spec = await $.getJSON("https://hbak0001.github.io/fit3179-a2/results.bar.chart.json");
+    donut_spec = await $.getJSON("https://hbak0001.github.io/fit3179-a2/results.donut.chart.json");
     displayElectorateInfo(null);
 }
 
