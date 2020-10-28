@@ -1,0 +1,21 @@
+{
+    "field": "PartyAb",
+    "scale": {
+        "domain": ["ALP", "LP", "LNP", "NP", "CLP",
+                "", "RUA", "GRN", "UAPP", "XEN", "IND",
+                "ON", "AJP", "CDP", "FACN", "KAP", "ASP",
+                "SPP", "LDP", "DHJP", "WAP", "AUC",
+                "DLP", "FUT", "VNS", "REAS", "AUP", "AFN",
+                "GAP", "CEC", "SEP", "SAL", "NAFD", "ABFA",
+                "AUD", "AWP", "LAOL", "CPP",
+                "NCP", "IMO", "FLUX"],
+        "range": ["red", "blue", "blue", "darkgreen", "blue",
+                "darkgray", "darkblue", "lime", "yellow", "orange", "lightgray",
+                "darkorange", "brown", "crimson", "navy", "darkred", "orangered",
+                "midnightblue", "deepskyblue", "mediumblue", "gold", "goldenrod",
+                "steelblue", "teal", "black", "darkcyan", "purple", "midnightblue",
+                "darkblue", "lightyellow", "firebrick", "firebrick", "grey", "grey",
+                "lightseagreen", "skyblue", "darkslategrey", "dodgerblue",
+                "darkslategrey", "darkslategrey", "lightpink"]
+    }
+}

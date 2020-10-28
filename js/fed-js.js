@@ -10,7 +10,6 @@ var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
                     displayElectorateInfo(item);
                     
                 });
-                console.log(result)
                 window.dispatchEvent(new Event('resize'));
             }).catch(console.error);
 
@@ -22,8 +21,9 @@ function displayElectorateInfo(item) {
         let bar_spec_filtered = JSON.parse(JSON.stringify(bar_spec));
         if (item !== null){
             let division = item.datum.properties.Sortname;
+            console.log(division);
             bar_spec_filtered.transform.unshift({
-                "filter": "datum.DivisionNm == '" + division + "'"
+                "filter": "datum.DivisionNm == \"" + division.replace("'", "\'") + "\""
             })
             document.getElementById("electorate-title").textContent = "Division Overview: " + division;
         }
