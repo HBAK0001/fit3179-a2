@@ -1,0 +1,32 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "A simple donut chart with embedded data.",
+    "width": "container",
+    "height": "container",
+    "data": {
+      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
+    },
+    "transform": [
+      {
+        "filter": "datum.National > 0"
+      }
+    ],
+    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+    "encoding": {
+      "theta": {
+        "field": "National",
+        "type": "quantitative",
+        "title": "Seats"
+        
+      },
+      "color": {
+        "field": "Party",
+        "scale": {
+            "range": ["red", "orange", "grey", "darkred", "blue",
+                    "cornflowerblue", "lime", "darkgreen"]
+        }
+      }
+    },
+    "view": {"stroke": null}
+  }
+  

@@ -4,15 +4,22 @@ var donut_spec = null;
 /*
     Display Main Map Visualisation
 */
-var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
-            
-            vegaEmbed('#vis-main', spec_vic).then(function(result) {
-                result.view.addEventListener('click', function(event, item){
-                    displayElectorateInfo(item);
-                    
-                });
-                window.dispatchEvent(new Event('resize'));
-            }).catch(console.error);
+var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";         
+vegaEmbed('#vis-main', spec_vic).then(function(result) {
+    result.view.addEventListener('click', function(event, item){
+        displayElectorateInfo(item);
+        
+    });
+    window.dispatchEvent(new Event('resize'));
+}).catch(console.error);
+
+/* 
+    Display Overview Visualisations
+*/
+var spec_seats = "https://HBAK0001.github.io/fit3179-a2/overview.seats.json"
+vegaEmbed('#vis-seats', spec_vic).then(function(result) {
+    
+}).catch(console.error);
 
 /*
     Display electorate results when clicked
