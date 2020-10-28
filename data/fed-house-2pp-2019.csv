@@ -1,4 +1,4 @@
-DivisionNm,DivisionID,StateAb,PartyAb,Liberal/National Coalition Votes,Liberal/National Coalition Percentage,Australian Labor Party Votes,Australian Labor Party Percentage,TotalVotes,Swing
+DivisionNm,DivisionID,StateAb,PartyAb,Liberal/National Coalition Votes,Liberal/National Coalition,Australian Labor Party Votes,Australian Labor Party,TotalVotes,Swing
 Adelaide,179,SA,ALP,44819,41.82,62362,58.18,107181,0.12
 Aston,197,VIC,LP,60180,60.13,39910,39.87,100090,2.72
 Ballarat,198,VIC,ALP,40068,39.02,62615,60.98,102683,-3.62
