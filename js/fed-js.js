@@ -17,7 +17,7 @@ vegaEmbed('#vis-main', spec_vic).then(function(result) {
     Display Overview Visualisations
 */
 var spec_seats = "https://HBAK0001.github.io/fit3179-a2/overview.seats.json"
-vegaEmbed('#vis-seats', spec_vic).then(function(result) {
+vegaEmbed('#vis-seats', spec_seats).then(function(result) {
     
 }).catch(console.error);
 
