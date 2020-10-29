@@ -34,14 +34,11 @@ function displayElectorateInfo(item) {
                 "filter": "datum.DivisionNm == \"" + division.replace("'", "\'") + "\""
             })
             document.getElementById("electorate-title").textContent = "Division Overview: " + division;
-        }
-        else {
-            document.getElementById("electorate-title").textContent = "National Overview";
-        }
-        // Embed Chart on Page
-        vegaEmbed('#vis-bar', bar_spec_filtered).then(function (result) {
+            // Embed Chart on Page
+            vegaEmbed('#vis-bar', bar_spec_filtered).then(function (result) {
 
-        });
+            });
+        }
     }
     if (donut_spec !== null) {
         let donut_spec_filtered = JSON.parse(JSON.stringify(donut_spec));
@@ -51,11 +48,12 @@ function displayElectorateInfo(item) {
             donut_spec_filtered.transform.unshift({
                 "filter": "datum.DivisionNm == \"" + division.replace("'", "\'") + "\""
             })
-        }
-        // Embed Chart on Page
-        vegaEmbed('#vis-donut', donut_spec_filtered).then(function (result) {
+            // Embed Chart on Page
+            vegaEmbed('#vis-donut', donut_spec_filtered).then(function (result) {
 
-        });
+            });
+        }
+        
     }
 }
 
