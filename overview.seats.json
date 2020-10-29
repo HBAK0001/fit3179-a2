@@ -22,8 +22,9 @@
         "field": "Party",
         "scale": {
             "range": ["red", "orange", "grey", "darkred", "blue",
-                    "cornflowerblue", "lime", "darkgreen"]
-        }
+                    "midnightblue", "lime", "darkgreen"]
+        },
+        "legend": null
       }
     },
     "view": {"stroke": null}

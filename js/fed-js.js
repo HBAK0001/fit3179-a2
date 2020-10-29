@@ -64,6 +64,9 @@ async function main(){
     bar_spec = await $.getJSON("https://hbak0001.github.io/fit3179-a2/results.bar.chart.json");
     donut_spec = await $.getJSON("https://hbak0001.github.io/fit3179-a2/results.donut.chart.json");
     displayElectorateInfo(null);
+    vegaEmbed('#vis-bar-main', bar_spec).then(function (result) {
+
+    });
 }
 
 main()

@@ -17,21 +17,22 @@
             <div class="pure-u-1-1"><h1>Hayden's Web Page</h1></div>
             <div class="pure-u-1-1"><h2>2019 Australian Federal Election results (House of Representatives)</h2></div>
             <div class="pure-u-3-5"><h3>Results Map</h3></div>
-            <div class="pure-u-1-5"></h3></div>
+            <div class="pure-u-1-5"><h3>National Overview</h3></div>
             <div class="pure-u-3-5">
                 <div id="vis-main" style="margin: auto; width: 54vw"></div>
             </div>
-            <div class="pure-u-1-5">
-                <div style="height:33%">
-                    <div id="vis-seats" style="width: 100%"></div>
-                </div>
-                <div>
-                    <p>[Bar chart for states will go here]</p>
-                </div>
-                <div>
-                    <p>[Bar chart for urban vs rural will go here]</p>
+            <!--
+                <div class="pure-u-1-5"><div style="height:33%"><div id="vis-seats" style="width: 100%; max-height:20vh"></div></div></div>
+                <div class="pure-u-1-5"><div id="vis-bar-main" style="width: 100%; max-height:20vh; overflow-y: scroll;"></div></div>
+            -->
+            <div class="pure-u-2-5">
+                <div class="pure-g" style="width: 100%; height: 100%">
+                    <div class="pure-u-1-2"><div style="height:33%"><div id="vis-seats" style="width: 100%; max-height:20vh"></div></div></div>
+                    <div class="pure-u-1-2"><div id="vis-bar-main" style="width: 100%; max-height:20vh; overflow-y: scroll;"></div></div>
+                    <div class="pure-u-1-1"><h3>Breakdown</h3></div>
                 </div>
             </div>
+
             <div class="pure-u-3-5"><h3 id="electorate-title">Click on a division to view its data!</div>
             <div class="pure-u-2-5"></div>
             <div class="pure-u-2-5" style="overflow-y: scroll; max-height: 24vh">
@@ -42,7 +43,7 @@
                 <div id="vis-donut" style="width: 100%"></div>
             </div>
             <div class="pure-u-2-5">
-                
+                A
             </div>
         </div>
         <script type="text/javascript" src="js/fed-js.js">

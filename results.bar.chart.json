@@ -43,6 +43,9 @@
       {
         "mark": "bar",
         "encoding": {
+          "tooltip": [
+            { "field": "PartyNm", "type": "ordinal" }
+          ],
           "color": {
             "field": "PartyAb",
             "scale": {
