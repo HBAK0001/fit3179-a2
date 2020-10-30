@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html lang = "en" >
+    <head>
+        <title>Hayden's FIT3179 Assignment 2 Visualisation</title>
+        <meta charset = "UTF-8" />
+        <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+        <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
+        <!-- Import vega-embed -->
+        <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="dashboard">
+            <div class="title-container"><h1>2019 Australian Federal Election Results Explorer (House of Respresentatives)</h1></div>
+            <div class="map-container"><div id="vis-main" style="margin: auto; width: 60vw"></div></div>
+            <div class="division-container" style="max-height: 30vh">
+                <h3 id="electorate-title">Click on a division to view its data!</h3>
+                <div class="overview-grid">
+                    <div style="overflow-y: scroll; max-height: 20vh">
+                        <div id="vis-bar" style="width: 100%"></div>
+                    </div>
+                    <div id="vis-donut" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="overview-container">
+                <h3>National Overview</h3>
+                <div class="overview-grid">
+                    <div id="vis-seats" style="width: 100%; max-height:20vh"></div>
+                    <div id="vis-bar-main" style="width: 100%; max-height:20vh; overflow-y: scroll;"></div>
+                </div>
+            </div>
+            <div class="breakdown-container">
+                <h3>Demographic Breakdown</h3>
+                <h4>Comparison of States</h4>
+                <div class="overview-grid">
+                    <div>A</div>
+                    <div>B</div>
+                </div>
+                <h4>Comparison of Urban vs Rural</h4>
+                <div class="overview-grid" style="height: auto">
+                    <div>C</div>
+                    <div>D</div>
+                </div>
+            </div>
+        </div>
+        <script src="js/fed-js.js"></script>
+    </body>
+</html>

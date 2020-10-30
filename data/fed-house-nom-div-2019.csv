@@ -1,0 +1,152 @@
+TransactionId,DivisionId,StateAb,DivisionNm,DivisionAb,Enrolment,Demographic,Nominations
+24310,179,SA,Adelaide,ADEL,121606,Inner Metropolitan,6
+24310,197,VIC,Aston,ASTO,110342,Outer Metropolitan,5
+24310,198,VIC,Ballarat,BALL,114954,Provincial,7
+24310,103,NSW,Banks,BANK,106253,Inner Metropolitan,6
+24310,180,SA,Barker,BARK,118371,Rural,7
+24310,104,NSW,Barton,BART,108992,Inner Metropolitan,6
+24310,192,TAS,Bass,BASS,76532,Provincial,7
+24310,318,ACT,Bean,BEAN,104482,Inner Metropolitan,8
+24310,200,VIC,Bendigo,BEND,112755,Provincial,7
+24310,105,NSW,Bennelong,BENN,108815,Inner Metropolitan,5
+24310,106,NSW,Berowra,BERO,106331,Outer Metropolitan,9
+24310,304,QLD,Blair,BLAI,113520,Provincial,9
+24310,107,NSW,Blaxland,BLAX,105383,Inner Metropolitan,5
+24310,310,QLD,Bonner,BONN,104599,Outer Metropolitan,6
+24310,182,SA,Boothby,BOOT,123949,Outer Metropolitan,8
+24310,155,QLD,Bowman,BOWM,109425,Outer Metropolitan,6
+24310,193,TAS,Braddon,BRAD,79194,Rural,9
+24310,108,NSW,Bradfield,BRFD,107304,Inner Metropolitan,5
+24310,235,WA,Brand,BRAN,106998,Outer Metropolitan,8
+24310,156,QLD,Brisbane,BRIS,115557,Inner Metropolitan,7
+24310,201,VIC,Bruce,BRUC,109195,Outer Metropolitan,5
+24310,317,WA,Burt,BURT,105236,Outer Metropolitan,9
+24310,109,NSW,Calare,CALA,118099,Rural,7
+24310,203,VIC,Calwell,CALW,107507,Outer Metropolitan,8
+24310,101,ACT,Canberra,CANB,95348,Inner Metropolitan,6
+24310,236,WA,Canning,CANN,107207,Outer Metropolitan,8
+24310,157,QLD,Capricornia,CAPR,102585,Provincial,9
+24310,204,VIC,Casey,CASE,113307,Rural,10
+24310,111,NSW,Chifley,CHIF,111980,Outer Metropolitan,6
+24310,205,VIC,Chisholm,CHIS,106323,Inner Metropolitan,9
+24310,319,TAS,Clark,CLAR,73846,Inner Metropolitan,5
+24310,112,NSW,Cook,COOK,106957,Inner Metropolitan,7
+24310,320,VIC,Cooper,COOP,110836,Inner Metropolitan,8
+24310,207,VIC,Corangamite,CORA,111601,Provincial,8
+24310,208,VIC,Corio,CORI,110304,Provincial,4
+24310,237,WA,Cowan,COWA,98665,Outer Metropolitan,7
+24310,113,NSW,Cowper,COWP,124340,Provincial,8
+24310,114,NSW,Cunningham,CUNN,115231,Provincial,6
+24310,238,WA,Curtin,CURT,100422,Inner Metropolitan,8
+24310,158,QLD,Dawson,DAWS,105248,Rural,9
+24310,209,VIC,Deakin,DEAK,107493,Outer Metropolitan,8
+24310,252,QLD,Dickson,DICK,108211,Outer Metropolitan,8
+24310,115,NSW,Dobell,DOBE,117206,Provincial,6
+24310,210,VIC,Dunkley,DUNK,110636,Outer Metropolitan,8
+24310,312,WA,Durack,DURA,97104,Rural,7
+24310,117,NSW,Eden-Monaro,EMON,114147,Rural,8
+24310,159,QLD,Fadden,FADD,114061,Outer Metropolitan,7
+24310,160,QLD,Fairfax,FAIR,114123,Rural,9
+24310,118,NSW,Farrer,FARR,115525,Rural,9
+24310,102,ACT,Fenner,FENN,96017,Inner Metropolitan,5
+24310,161,QLD,Fisher,FISH,113134,Rural,7
+24310,211,VIC,Flinders,FLIN,110703,Rural,9
+24310,311,QLD,Flynn,FLYN,103061,Rural,8
+24310,162,QLD,Forde,FORD,107261,Outer Metropolitan,6
+24310,239,WA,Forrest,FORR,105452,Rural,8
+24310,119,NSW,Fowler,FOWL,106941,Outer Metropolitan,5
+24310,195,TAS,Franklin,FRAN,76619,Outer Metropolitan,5
+24310,321,VIC,Fraser,FRAS,109408,Outer Metropolitan,6
+24310,240,WA,Fremantle,FREM,105465,Inner Metropolitan,8
+24310,212,VIC,Gellibrand,GELL,111194,Inner Metropolitan,4
+24310,120,NSW,Gilmore,GILM,122364,Rural,7
+24310,213,VIC,Gippsland,GIPP,110538,Rural,7
+24310,214,VIC,Goldstein,GOLD,108514,Inner Metropolitan,6
+24310,309,VIC,Gorton,GORT,110416,Outer Metropolitan,5
+24310,121,NSW,Grayndler,GRAY,109567,Inner Metropolitan,6
+24310,122,NSW,Greenway,GREE,110299,Outer Metropolitan,6
+24310,183,SA,Grey,GREY,119949,Rural,8
+24310,163,QLD,Griffith,GRIF,111937,Inner Metropolitan,6
+24310,164,QLD,Groom,GROO,105978,Provincial,6
+24310,305,WA,Hasluck,HASL,98624,Outer Metropolitan,8
+24310,165,QLD,Herbert,HERB,108453,Provincial,8
+24310,215,VIC,Higgins,HIGG,111013,Inner Metropolitan,6
+24310,185,SA,Hindmarsh,HIND,122645,Inner Metropolitan,6
+24310,166,QLD,Hinkler,HINK,107742,Provincial,10
+24310,216,VIC,Holt,HOLT,106812,Outer Metropolitan,4
+24310,217,VIC,Hotham,HOTH,107833,Inner Metropolitan,6
+24310,124,NSW,Hughes,HUGH,106204,Outer Metropolitan,7
+24310,125,NSW,Hume,HUME,116405,Provincial,7
+24310,126,NSW,Hunter,HUNT,121436,Rural,8
+24310,218,VIC,Indi,INDI,112775,Rural,7
+24310,219,VIC,Isaacs,ISAA,108297,Outer Metropolitan,6
+24310,220,VIC,Jagajaga,JAGA,107553,Inner Metropolitan,5
+24310,167,QLD,Kennedy,KENN,107679,Rural,6
+24310,127,NSW,Kingsford Smith,KSMI,111098,Inner Metropolitan,7
+24310,186,SA,Kingston,KING,118735,Outer Metropolitan,5
+24310,221,VIC,Kooyong,KOOY,108413,Inner Metropolitan,8
+24310,223,VIC,La Trobe,LTRO,110721,Outer Metropolitan,7
+24310,222,VIC,Lalor,LALO,106783,Outer Metropolitan,6
+24310,168,QLD,Leichhardt,LEIC,109458,Rural,8
+24310,169,QLD,Lilley,LILL,108608,Inner Metropolitan,7
+24310,128,NSW,Lindsay,LIND,118734,Outer Metropolitan,9
+24310,306,NT,Lingiari,LING,70023,Rural,6
+24310,302,QLD,Longman,LONG,114718,Provincial,8
+24310,130,NSW,Lyne,LYNE,118726,Rural,9
+24310,196,TAS,Lyons,LYON,79625,Rural,6
+24310,131,NSW,Macarthur,MACA,119094,Outer Metropolitan,7
+24310,132,NSW,Mackellar,MACK,110817,Outer Metropolitan,7
+24310,322,VIC,Macnamara,MACN,113802,Inner Metropolitan,9
+24310,133,NSW,Macquarie,MACQ,107962,Provincial,5
+24310,187,SA,Makin,MAKI,119982,Outer Metropolitan,5
+24310,224,VIC,Mallee,MALL,113767,Rural,13
+24310,170,QLD,Maranoa,MARA,105051,Rural,7
+24310,225,VIC,Maribyrnong,MARI,112866,Inner Metropolitan,4
+24310,188,SA,Mayo,MAYO,122377,Rural,6
+24310,226,VIC,McEwen,MCEW,108041,Rural,8
+24310,315,NSW,McMahon,MCMA,106754,Outer Metropolitan,6
+24310,171,QLD,McPherson,MCPH,109261,Provincial,9
+24310,228,VIC,Melbourne,MELB,107572,Inner Metropolitan,7
+24310,229,VIC,Menzies,MENZ,107801,Outer Metropolitan,6
+24310,134,NSW,Mitchell,MITC,110345,Outer Metropolitan,5
+24310,323,VIC,Monash,MONA,112483,Rural,7
+24310,172,QLD,Moncrieff,MONC,111386,Provincial,8
+24310,242,WA,Moore,MOOR,101523,Outer Metropolitan,8
+24310,173,QLD,Moreton,MORE,102769,Inner Metropolitan,6
+24310,135,NSW,New England,NENG,111893,Rural,8
+24310,136,NSW,Newcastle,NEWC,117650,Provincial,7
+24310,324,VIC,Nicholls,NICH,111134,Rural,8
+24310,137,NSW,North Sydney,NSYD,109218,Inner Metropolitan,7
+24310,243,WA,O'Connor,OCON,101983,Rural,9
+24310,174,QLD,Oxley,OXLE,104214,Outer Metropolitan,7
+24310,138,NSW,Page,PAGE,122709,Rural,7
+24310,139,NSW,Parkes,PARK,109513,Rural,6
+24310,140,NSW,Parramatta,PARR,103122,Inner Metropolitan,6
+24310,249,NSW,Paterson,PATE,122820,Provincial,6
+24310,244,WA,Pearce,PEAR,119583,Outer Metropolitan,10
+24310,245,WA,Perth,PERT,101535,Inner Metropolitan,8
+24310,175,QLD,Petrie,PETR,115449,Outer Metropolitan,6
+24310,176,QLD,Rankin,RANK,103551,Outer Metropolitan,8
+24310,144,NSW,Reid,REID,108876,Inner Metropolitan,6
+24310,145,NSW,Richmond,RICH,119332,Rural,8
+24310,250,NSW,Riverina,RIVE,113960,Rural,4
+24310,146,NSW,Robertson,ROBE,111142,Provincial,8
+24310,177,QLD,Ryan,RYAN,106249,Outer Metropolitan,7
+24310,232,VIC,Scullin,SCUL,105154,Outer Metropolitan,6
+24310,148,NSW,Shortland,SHOR,114054,Provincial,7
+24310,307,NT,Solomon,SOLO,69336,Inner Metropolitan,6
+24310,325,SA,Spence,SPEN,119385,Outer Metropolitan,6
+24310,246,WA,Stirling,STIR,101243,Inner Metropolitan,7
+24310,190,SA,Sturt,STUR,123818,Inner Metropolitan,8
+24310,247,WA,Swan,SWAN,100857,Inner Metropolitan,10
+24310,149,NSW,Sydney,SYDN,114215,Inner Metropolitan,6
+24310,248,WA,Tangney,TANG,94365,Inner Metropolitan,9
+24310,233,VIC,Wannon,WANN,114572,Rural,5
+24310,151,NSW,Warringah,WARR,104995,Inner Metropolitan,10
+24310,251,NSW,Watson,WATS,107774,Inner Metropolitan,6
+24310,152,NSW,Wentworth,WENT,103498,Inner Metropolitan,7
+24310,153,NSW,Werriwa,WERR,117693,Outer Metropolitan,6
+24310,150,NSW,Whitlam,WHIT,118695,Provincial,6
+24310,178,QLD,Wide Bay,WBAY,107495,Rural,7
+24310,234,VIC,Wills,WILL,110658,Inner Metropolitan,6
+24310,316,QLD,Wright,WRIG,112115,Rural,8
