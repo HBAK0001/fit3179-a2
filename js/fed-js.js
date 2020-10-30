@@ -21,6 +21,11 @@ vegaEmbed('#vis-seats', spec_seats).then(function(result) {
     
 }).catch(console.error);
 
+var spec_states = "https://HBAK0001.github.io/fit3179-a2/state.breakdown.json"
+vegaEmbed('#vis-states', spec_states).then(function(result) {
+    
+}).catch(console.error);
+
 /*
     Display electorate results when clicked
 */
