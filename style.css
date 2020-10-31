@@ -39,3 +39,15 @@
 .breakdown-container h3, .breakdown-container h4 {
     margin: 0;
 }
+
+.breakdown-grid {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 10% 42% auto 42%;
+    grid-template-areas:
+        "headings-1 headings-1"
+        "states-bar states-pie"
+        "headings-2 headings-2"
+        "demo-bar demo-pie";
+}

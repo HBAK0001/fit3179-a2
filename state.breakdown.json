@@ -27,7 +27,7 @@
           "filter": {"selection": "state"}
         }
       ],
-      "width": {"step": 30}, "height": 230,
+      "width": {"step": 30},
       "mark": {
         "type": "bar"
       },
