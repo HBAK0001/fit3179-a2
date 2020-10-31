@@ -3,6 +3,7 @@
     "data": {
       "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-all-2019.csv"
     },
+    "autosize": "fit-y",
     "vconcat": [
       {
       "selection": {

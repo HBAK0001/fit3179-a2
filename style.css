@@ -35,3 +35,7 @@
 .breakdown-container {
     grid-area: breakdown;
 }
+
+.breakdown-container h3, .breakdown-container h4 {
+    margin: 0;
+}
