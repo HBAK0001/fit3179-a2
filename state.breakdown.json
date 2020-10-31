@@ -3,14 +3,14 @@
     "data": {
       "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-all-2019.csv"
     },
-    "autosize": "none",
+    "autosize": "pad",
     "vconcat": [
       {
       "selection": {
         "state": {
           "type": "single",
           "fields": ["StateAb"],
-          "bind": {"input": "select", "options": ["VIC", "NSW", "ACT", "TAmore hight S", "NT", "WA", "QLD"], "name": "State/Territory"}
+          "bind": {"input": "select", "options": ["VIC", "NSW", "ACT", "TAS", "NT", "WA", "QLD"], "name": "State/Territory"}
         }
       }
       ,
@@ -27,7 +27,7 @@
           "filter": {"selection": "state"}
         }
       ],
-      "width": {"step": 30},
+      "width": {"step": 30}, "height": 230,
       "mark": {
         "type": "bar"
       },
