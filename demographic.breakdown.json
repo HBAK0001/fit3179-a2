@@ -49,7 +49,7 @@
           },
           {"filter": {"selection": "region"}}
         ],
-        "width": {"step": 30},
+        "width": {"step": 30}, "height": "container",
         "mark": {"type": "bar"},
         "encoding": {
           "y": {
