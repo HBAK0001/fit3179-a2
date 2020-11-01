@@ -3,6 +3,7 @@
     "description": "A bar chart that sorts the y-values by the x-values.",
     "data": {"url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-all-2019.csv"},
     "width": "container",
+    "title": "First Preference Votes per Party",
     "transform": [
       {
         "joinaggregate": [{
