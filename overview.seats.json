@@ -22,8 +22,10 @@
     "color": {
       "field": "Party",
       "scale": {
-          "range": ["red", "orange", "grey", "darkred", "blue",
-                  "midnightblue", "lime", "darkgreen"]
+        "range": [ "red", "blue", "royalblue", "darkgreen",
+          "darkred", "orange", "lightgrey", "lime" ],
+        "domain": ["Australian Labor Party", "Liberal", "Liberal National Party", "The Nationals",
+          "Katter's Australian Party (KAP)", "Centre Alliance", "Independent", "The Greens"]
       },
       "legend": null
     }
