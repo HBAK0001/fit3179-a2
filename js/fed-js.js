@@ -26,7 +26,7 @@ vegaEmbed('#vis-states', spec_states).then(function(result) {
     
 }).catch(console.error);
 var spec_demo = "https://HBAK0001.github.io/fit3179-a2/demographic.breakdown.json"
-vegaEmbed('#vis-demo', spec_states).then(function(result) {
+vegaEmbed('#vis-demo', spec_demo).then(function(result) {
     
 }).catch(console.error);
 

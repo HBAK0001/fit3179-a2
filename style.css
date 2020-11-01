@@ -1,15 +1,15 @@
 .dashboard {
     padding: 0vh 1vw;
-    width: 98vw;
-    height: 98vh;
+    width: 96vw;
+    height: 96vh;
     display: grid;
     grid-template-areas: 
         "title title"
         "map breakdown"
         "map breakdown"
         "division breakdown";
-    grid-template-columns: 58vw 40vw;
-    grid-template-rows: 10vh 24vh 32vh 32vh;
+    grid-template-columns: 58vw 38vw;
+    grid-template-rows: 8vh 24vh 32vh 32vh;
 }
 
 .title-container {
@@ -18,10 +18,12 @@
 
 .map-container {
     grid-area: map;
+    border-right: 1px black;
 }
 
 .division-container {
     grid-area: division;
+    border-right: 1px black;
 }
 
 .overview-container {
@@ -45,12 +47,12 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 3vh 21vh 3vh 30vh 3vh 28vh;
+    grid-template-rows: 3vh 21.5vh 2.5vh 30vh 3vh 28vh;
     grid-template-areas:
         "headings-1 headings-1"
         "desc nat-bar"
         "headings-0 headings-0"
-        "nat-bar2 nat-bar2"
+        "states-bar states-bar"
         "headings-2 headings-2"
-        "states-bar states-bar";
+        "nat-bar2 nat-bar2";
 }
