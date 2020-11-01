@@ -159,8 +159,8 @@
         "encode": {
           "enter": {
             "strokeWidth": {"value": 1},
-            "stroke": {"value": "#ddd"},
-            "fill": {"value": null}
+            "stroke": {"value": "#fff"},
+            "fill": {"value": "#b3ecff"}
           }
         },
         "transform": [
