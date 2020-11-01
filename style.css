@@ -1,29 +1,30 @@
 .dashboard {
     padding: 0vh 1vw;
-    width: 96vw;
-    height: 96vh;
+    width: 98vw;
+    height: 98vh;
     display: grid;
     grid-template-areas: 
         "title title"
         "map breakdown"
         "map breakdown"
         "division breakdown";
-    grid-template-columns: 58vw 38vw;
-    grid-template-rows: 8vh 24vh 32vh 32vh;
+    grid-template-columns: 58vw 40vw;
+    grid-template-rows: 8vh 24vh 32vh 36vh;
 }
 
 .title-container {
     grid-area: title;
+    border-bottom: 1px solid black;
 }
 
 .map-container {
     grid-area: map;
-    border-right: 1px black;
+    border-right: 1px solid black;
 }
 
 .division-container {
     grid-area: division;
-    border-right: 1px black;
+    border-right: 1px solid black;
 }
 
 .overview-container {
@@ -37,6 +38,7 @@
 
 .breakdown-container {
     grid-area: breakdown;
+    padding: 1vh 1vw;
 }
 
 .breakdown-container h3, .breakdown-container h4 {
@@ -55,4 +57,8 @@
         "states-bar states-bar"
         "headings-2 headings-2"
         "nat-bar2 nat-bar2";
+}
+
+body {
+    background-color: #efefef;
 }
