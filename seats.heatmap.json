@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+    "description": "A simple donut chart with embedded data.",
+    "data": {
+      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
+    },
+    "mark": {"type": "rect"},
+    "transform": [{"filter": "datum.National > 0"},
+    {
+      "fold": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
+      "as": ["state", "seats"]
+    },
+    {
+      "calculate": "datum.Party == 'Liberal' || datum.Party == 'Liberal National Party' || datum.Party == 'The Nationals'",
+      "as": "InCoalition"
+    },
+    {
+      "calculate": "datum.InCoalition ? 'Liberal National Coalition' : datum.Party",
+      "as": "Party Group"
+    }],
+    "encoding": {
+      "x": {
+        "field": "state", "title": "State/Territory"
+      },
+      "y": {
+        "field": "Party Group"
+      },
+      "color": {
+        "field": "seats",
+        "type": "quantitative",
+        "bin": {
+          "anchor": 1,
+          "base": 2
+        },
+        "title": "Seats"
+      },
+      "tooltip": [
+        {"field": "Party Group", "title": "Party"},
+        {"field": "seats", "title": "Seats"}
+      ]
+    },
+    "config": {
+      "axis": {"grid": true, "tickBand": "extent"}
+    }
+  }
+    

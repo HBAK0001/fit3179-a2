@@ -18,7 +18,7 @@ vegaEmbed('#vis-main', spec_vic).then(function(result) {
 */
 var spec_seats = "https://HBAK0001.github.io/fit3179-a2/overview.seats.json"
 vegaEmbed('#vis-seats', spec_seats).then(function(result) {
-    console.log(result)
+    
 }).catch(console.error);
 
 var spec_states = "https://HBAK0001.github.io/fit3179-a2/state.breakdown.json"
@@ -27,6 +27,11 @@ vegaEmbed('#vis-states', spec_states).then(function(result) {
 }).catch(console.error);
 var spec_demo = "https://HBAK0001.github.io/fit3179-a2/demographic.breakdown.json"
 vegaEmbed('#vis-demo', spec_demo).then(function(result) {
+    
+}).catch(console.error);
+
+var spec_heatmap = "https://HBAK0001.github.io/fit3179-a2/seats.heatmap.json"
+vegaEmbed('#vis-heatmap', spec_heatmap).then(function(result) {
     
 }).catch(console.error);
 
