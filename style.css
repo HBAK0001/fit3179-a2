@@ -45,7 +45,7 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 5% 45% 5% 45%;
+    grid-template-rows: 5vh 50vh 5vh 28vh;
     grid-template-areas:
         "headings-1 headings-1"
         "nat-bar nat-pie"
