@@ -122,18 +122,10 @@
       {
         "name": "parties",
         "type": "ordinal",
-        "range": [
-          "red",
-          "red",
-          "blue",
-          "darkred",
-          "blue",
-          "orange",
-          "gray",
-          "darkgreen",
-          "lightgreen",
-          "red"
-        ]
+        "range": [ "red", "blue", "royalblue", "darkgreen",
+          "darkred", "orange", "lightgrey", "lime" ],
+        "domain": ["Australian Labor Party", "Liberal", "Liberal National Party", "The Nationals",
+          "Katter's Australian Party (KAP)", "Centre Alliance", "Independent", "The Greens"]
       }
     ],
     "legends": [
