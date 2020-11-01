@@ -139,6 +139,7 @@
     "legends": [
       {
         "fill": "parties",
+        "fillColor": "#fff",
         "orient": "top-left",
         "title": "Elected Party",
         "encode": {
