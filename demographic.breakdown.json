@@ -12,7 +12,7 @@
             "fields": ["Demographic"],
             "bind": {
               "input": "select",
-              "options": ["Inner Metropolitan", "Outer Metropolitan", "Provincial", "Rural"],
+              "options": [null, "Inner Metropolitan", "Outer Metropolitan", "Provincial", "Rural"],
               "name": "Demographic"
             }
           }

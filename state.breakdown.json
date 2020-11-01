@@ -11,7 +11,7 @@
         "state": {
           "type": "single",
           "fields": ["StateAb"],
-          "bind": {"input": "select", "options": ["VIC", "NSW", "ACT", "TAS", "NT", "WA", "QLD"], "name": "State/Territory"}
+          "bind": {"input": "select", "options": [null, "VIC", "NSW", "ACT", "TAS", "NT", "WA", "QLD"], "name": "State/Territory"}
         }
       }
       ,
