@@ -14,40 +14,68 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <div class="pure-g" style="max-height: 100vh; padding: 1vh 2vw; min-height: 98vh">
-            <div class="pure-u-1-1"><h1>Hayden's Web Page</h1></div>
-            <div class="pure-u-1-1"><h2>2019 Australian Federal Election results (House of Representatives)</h2></div>
-            <div class="pure-u-3-5"><h3>Results Map</h3></div>
-            <div class="pure-u-1-5"><h3>National Overview</h3></div>
-            <div class="pure-u-3-5">
-                <div id="vis-main" style="margin: auto; width: 54vw"></div>
-            </div>
-            <!--
-                <div class="pure-u-1-5"><div style="height:33%"><div id="vis-seats" style="width: 100%; max-height:20vh"></div></div></div>
-                <div class="pure-u-1-5"><div id="vis-bar-main" style="width: 100%; max-height:20vh; overflow-y: scroll;"></div></div>
-            -->
-            <div class="pure-u-2-5">
-                <div class="pure-g" style="width: 100%; height: 100%">
-                    <div class="pure-u-1-2"><div style="height:33%"><div id="vis-seats" style="width: 100%; max-height:20vh"></div></div></div>
-                    <div class="pure-u-1-2"><div id="vis-bar-main" style="width: 100%; max-height:20vh; overflow-y: scroll;"></div></div>
-                    <div class="pure-u-1-1"><h3>Breakdown</h3></div>
+        <div class="dashboard">
+            <div class="title-container"><h1>2019 Australian Federal Election Results Explorer (House of Respresentatives)</h1></div>
+            <div class="map-container" style="padding: 1vh 1vw"><div id="vis-main" style="margin: auto; width: 56vw; height: 54vh"></div></div>
+            <div class="division-container" style="max-height: 36vh">
+                <h3 id="electorate-title">Click on a division to view its data!</h3>
+                <div class="overview-grid">
+                    <div style="overflow-y: scroll; min-height: 30vh; max-height: 34vh">
+                        <div id="vis-bar" style="width: 100%"></div>
+                    </div>
+                    <div id="vis-donut" style="width: 100%"></div>
                 </div>
             </div>
+            <div class="breakdown-container">
+                <!--
+                <div style="height: 3vh">
+                    <h3>Demographic Breakdown</h3>
+                </div>
+                <div style="height: 3vh">
+                    <h4>Comparison of States</h4>
+                </div>
+                <div class="overview-grid" style="height: auto">
+                    <div id="vis-states" style="overflow-x: scroll; width: 100%; height: 24vh; overflow-y: auto;"></div>
+                    <div id="vis-states-2" style="width: 100%"></div>
+                </div>
+                <div style="height: 3vh">
+                    <h4>Comparison of Urban vs Rural</h4>
+                </div>
+                <div class="overview-grid" style="height: auto">
+                    <div id="vis-demographic" style="overflow-x: scroll; width: 100%"></div>
+                    <div id="vis-demographic-2" style="width: 100%"></div>
+                </div>
+                -->
+                <div class="breakdown-grid">
+                    <div style="grid-area: headings-1">
+                        <h3>National Overview</h3>
+                    </div>
+                    <div style="grid-area: desc">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                            sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <div style="grid-area: nat-bar; height: 10vh; text-align: right;" >
+                        <div id="vis-seats" style="display: inline-block"></div>
+                    </div>
+                    <div style="grid-area: headings-0">
+                        <h3>First Preference Votes by State</h3>
+                    </div>
+                    <div style="grid-area: nat-bar2" >
+                        <div id="vis-demo" style="overflow-x: scroll; width: 100%;"></div>
+                    </div>
 
-            <div class="pure-u-3-5"><h3 id="electorate-title">Click on a division to view its data!</h3></div>
-            <div class="pure-u-2-5"></div>
-            <div class="pure-u-2-5" style="overflow-y: scroll; max-height: 24vh">
-                <div id="vis-bar" style="width: 100%"></div>
-            </div>
-
-            <div class="pure-u-1-5">
-                <div id="vis-donut" style="width: 100%"></div>
-            </div>
-            <div class="pure-u-2-5">
-                A
+                    <div style="grid-area: headings-2">
+                        <h3>First Preference Votes by Demographic Region</h3>
+                    </div>
+                    <div style="grid-area: states-bar">
+                        <div id="vis-states" style="overflow-x: scroll; width: 100%;"></div>
+                    </div>
+                </div>
             </div>
         </div>
-        <script type="text/javascript" src="js/fed-js.js">
-        </script>
+        <script src="js/fed-js.js"></script>
     </body>
 </html>
