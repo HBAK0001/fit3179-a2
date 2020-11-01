@@ -25,10 +25,10 @@ var spec_states = "https://HBAK0001.github.io/fit3179-a2/state.breakdown.json"
 vegaEmbed('#vis-states', spec_states).then(function(result) {
     
 }).catch(console.error);
-// var spec_states = "https://HBAK0001.github.io/fit3179-a2/demographic.breakdown.json"
-// vegaEmbed('#vis-demographic', spec_states).then(function(result) {
+var spec_demo = "https://HBAK0001.github.io/fit3179-a2/demographic.breakdown.json"
+vegaEmbed('#vis-demo', spec_states).then(function(result) {
     
-// }).catch(console.error);
+}).catch(console.error);
 
 /*
     Display electorate results when clicked

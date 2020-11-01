@@ -45,10 +45,12 @@
     height: 100%;
     display: grid;
     grid-template-columns: 50% 50%;
-    grid-template-rows: 5vh 50vh 5vh 28vh;
+    grid-template-rows: 3vh 21vh 3vh 30vh 3vh 28vh;
     grid-template-areas:
         "headings-1 headings-1"
-        "nat-bar nat-pie"
+        "desc nat-bar"
+        "headings-0 headings-0"
+        "nat-bar2 nat-bar2"
         "headings-2 headings-2"
-        "states-bar states-pie";
+        "states-bar states-bar";
 }
