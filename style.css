@@ -1,14 +1,15 @@
 .dashboard {
-    width: 100vw;
-    height: 100vh;
+    padding: 0vh 1vw;
+    width: 98vw;
+    height: 98vh;
     display: grid;
     grid-template-areas: 
         "title title"
         "map overview"
         "map breakdown"
         "division breakdown";
-    grid-template-columns: 60vw 40vw;
-    grid-template-rows: 10vh 20vh 35vh 35vh;
+    grid-template-columns: 58vw 40vw;
+    grid-template-rows: 10vh 24vh 32vh 32vh;
 }
 
 .title-container {
