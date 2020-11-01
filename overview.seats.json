@@ -2,7 +2,6 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
   "title": "Seat distribution by party",
   "height": "container",
-  "autosize": "fit-y",
   "description": "A simple donut chart with embedded data.",
   "data": {
     "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
