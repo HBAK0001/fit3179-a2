@@ -19,7 +19,7 @@
               "Provincial",
               "Rural"
             ],
-            "name": "Demographic"
+            "name": "Demographic: "
           }
         },
         "state": {
@@ -31,7 +31,7 @@
               null,
               "VIC", "NSW", "QLD", "WA", "SA", "ACT", "NT", "TAS"
             ],
-            "name": "State"
+            "name": "State: "
           }
         }
       },
