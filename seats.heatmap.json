@@ -67,7 +67,7 @@
       },
       "title": "State Seat %",
       "scale": {
-        "scheme": "goldgreen",
+        "scheme": "goldorange",
         "bins": [0, 10, 30, 50, 110]
       }
     },
