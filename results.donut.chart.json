@@ -7,11 +7,7 @@
   "background": "#efefef",
   "height": "container",
   "title": "Two Party Preferred Vote",
-  "transform": [
-    {
-      "filter": "datum.DivisionNm == 'Mallee'"
-    },
-    {
+  "transform": [{
       "fold": ["Liberal/National Coalition", "Australian Labor Party"],
       "as": ["Party", "Percentage"]
     },
