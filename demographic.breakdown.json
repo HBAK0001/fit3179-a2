@@ -1,161 +1,180 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-all-2019.csv"
-    },
-    "vconcat": [
-      {
-        "selection": {
-          "region": {
-            "type": "single",
-            "fields": ["Demographic"],
-            "bind": {
-              "input": "select",
-              "options": [null, "Inner Metropolitan", "Outer Metropolitan", "Provincial", "Rural"],
-              "name": "Demographic"
-            }
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "data": {
+    "url": "https://hbak0001.github.io/fit3179-a2/data/fed-cand-all-2019.csv"
+  },
+  "vconcat": [
+    {
+      "selection": {
+        "region": {
+          "type": "single",
+          "fields": ["Demographic"],
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "Inner Metropolitan",
+              "Outer Metropolitan",
+              "Provincial",
+              "Rural"
+            ],
+            "name": "Demographic"
           }
         },
-        "transform": [
-          {
-            "joinaggregate": [
-              {"op": "sum", "field": "TotalVotes", "as": "AllVotes"}
-            ]
-          },
-          {
-            "calculate": "datum.TotalVotes / datum.AllVotes",
-            "as": "PercentageVotes"
-          },
-          {
-            "joinaggregate": [
-              {
-                "op": "sum",
-                "field": "PercentageVotes",
-                "as": "sumPercentageVotes"
-              }
+        "state": {
+          "type": "single",
+          "fields": ["StateAb"],
+          "bind": {
+            "input": "select",
+            "options": [
+              null,
+              "VIC", "NSW", "QLD", "WA", "SA", "ACT", "NT", "TAS"
             ],
-            "groupby": ["PartyAb"]
-          },
-          {
-            "lookup": "DivisionNm",
-            "from": {
-              "data": {
-                "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-nom-div-2019.csv",
-                "format": {"type": "csv"}
-                },
-                "key": "DivisionNm",
-                "fields": ["Demographic"]
-              }
-          },
-          {"filter": {"selection": "region"}}
-        ],
-        "width": {"step": 30},
-        "mark": {"type": "bar"},
-        "encoding": {
-          "y": {
-            "aggregate": "sum",
-            "field": "TotalVotes",
-            "title": "population",
-            "axis": {"grid": false}
-          },
-          "x": {
-            "field": "PartyAb",
-            "axis": {"title": "", "labelAngle": 0},
-            "sort": "-y"
-          },
-          "color": {
-            "field": "PartyAb",
-            "scale": {
-              "domain": [
-                "ALP",
-                "LP",
-                "LNP",
-                "NP",
-                "CLP",
-                "",
-                "RUA",
-                "GRN",
-                "UAPP",
-                "XEN",
-                "IND",
-                "ON",
-                "AJP",
-                "CDP",
-                "FACN",
-                "KAP",
-                "ASP",
-                "SPP",
-                "LDP",
-                "DHJP",
-                "WAP",
-                "AUC",
-                "DLP",
-                "FUT",
-                "VNS",
-                "REAS",
-                "AUP",
-                "AFN",
-                "GAP",
-                "CEC",
-                "SEP",
-                "SAL",
-                "NAFD",
-                "ABFA",
-                "AUD",
-                "AWP",
-                "LAOL",
-                "CPP",
-                "NCP",
-                "IMO",
-                "FLUX"
-              ],
-              "range": [
-                "red",
-                "blue",
-                "blue",
-                "darkgreen",
-                "blue",
-                "darkgray",
-                "darkblue",
-                "lime",
-                "yellow",
-                "orange",
-                "lightgray",
-                "darkorange",
-                "brown",
-                "crimson",
-                "navy",
-                "darkred",
-                "orangered",
-                "midnightblue",
-                "deepskyblue",
-                "mediumblue",
-                "gold",
-                "goldenrod",
-                "steelblue",
-                "teal",
-                "black",
-                "darkcyan",
-                "purple",
-                "midnightblue",
-                "darkblue",
-                "lightyellow",
-                "firebrick",
-                "firebrick",
-                "grey",
-                "grey",
-                "lightseagreen",
-                "skyblue",
-                "darkslategrey",
-                "dodgerblue",
-                "darkslategrey",
-                "darkslategrey",
-                "lightpink"
-              ]
-            },
-            "legend": null
+            "name": "State"
           }
         }
+      },
+      "transform": [
+        {
+          "joinaggregate": [
+            {"op": "sum", "field": "TotalVotes", "as": "AllVotes"}
+          ]
+        },
+        {
+          "calculate": "datum.TotalVotes / datum.AllVotes",
+          "as": "PercentageVotes"
+        },
+        {
+          "joinaggregate": [
+            {
+              "op": "sum",
+              "field": "PercentageVotes",
+              "as": "sumPercentageVotes"
+            }
+          ],
+          "groupby": ["PartyAb"]
+        },
+        {
+          "lookup": "DivisionNm",
+          "from": {
+            "data": {
+              "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-nom-div-2019.csv",
+              "format": {"type": "csv"}
+            },
+            "key": "DivisionNm",
+            "fields": ["Demographic"]
+          }
+        },
+        {"filter": {"selection": "region"}},
+        {"filter": {"selection": "state"}}
+      ],
+      "width": {"step": 30},
+      "mark": {"type": "bar"},
+      "encoding": {
+        "y": {
+          "aggregate": "sum",
+          "field": "TotalVotes",
+          "title": "population",
+          "axis": {"grid": false}
+        },
+        "x": {
+          "field": "PartyAb",
+          "axis": {"title": "", "labelAngle": 0},
+          "sort": "-y"
+        },
+        "color": {
+          "field": "PartyAb",
+          "scale": {
+            "domain": [
+              "ALP",
+              "LP",
+              "LNP",
+              "NP",
+              "CLP",
+              "",
+              "RUA",
+              "GRN",
+              "UAPP",
+              "XEN",
+              "IND",
+              "ON",
+              "AJP",
+              "CDP",
+              "FACN",
+              "KAP",
+              "ASP",
+              "SPP",
+              "LDP",
+              "DHJP",
+              "WAP",
+              "AUC",
+              "DLP",
+              "FUT",
+              "VNS",
+              "REAS",
+              "AUP",
+              "AFN",
+              "GAP",
+              "CEC",
+              "SEP",
+              "SAL",
+              "NAFD",
+              "ABFA",
+              "AUD",
+              "AWP",
+              "LAOL",
+              "CPP",
+              "NCP",
+              "IMO",
+              "FLUX"
+            ],
+            "range": [
+              "red",
+              "blue",
+              "blue",
+              "darkgreen",
+              "blue",
+              "darkgray",
+              "darkblue",
+              "lime",
+              "yellow",
+              "orange",
+              "lightgray",
+              "darkorange",
+              "brown",
+              "crimson",
+              "navy",
+              "darkred",
+              "orangered",
+              "midnightblue",
+              "deepskyblue",
+              "mediumblue",
+              "gold",
+              "goldenrod",
+              "steelblue",
+              "teal",
+              "black",
+              "darkcyan",
+              "purple",
+              "midnightblue",
+              "darkblue",
+              "lightyellow",
+              "firebrick",
+              "firebrick",
+              "grey",
+              "grey",
+              "lightseagreen",
+              "skyblue",
+              "darkslategrey",
+              "dodgerblue",
+              "darkslategrey",
+              "darkslategrey",
+              "lightpink"
+            ]
+          },
+          "legend": null
+        }
       }
-    ]
-  }
+    }
+  ]
+}
