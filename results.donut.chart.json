@@ -1,33 +1,49 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "description": "A simple donut chart with embedded data.",
-    "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-2pp-2019.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-2pp-2019.csv"
+  },
+  "background": "#efefef",
+  "height": "container",
+  "title": "Two Party Preferred Vote",
+  "transform": [{
+      "fold": ["Liberal/National Coalition", "Australian Labor Party"],
+      "as": ["Party", "Percentage"]
     },
-    "background": "#efefef",
-    "height": "container",
-    "title": "Two Party Preferred Vote",
-    "transform": [
-      {
-        "fold": ["Liberal/National Coalition", "Australian Labor Party"],
-        "as": ["Party", "Percentage"]
+    {
+      "calculate": "datum.Percentage/100",
+      "as": "Proportion"
+    }
+  ],
+  "view": {"stroke": null},
+  "encoding": {
+    "theta": {
+          "field": "Percentage",
+          "type": "quantitative",
+          "stack": true
+        }
+  },
+  "layer": [
+    {
+      "mark": {"type": "arc", "innerRadius": 50},
+      "encoding": {
+        "color": {"field": "Party", "type": "nominal",
+        "scale": {
+          "domain": ["Australian Labor Party", "Liberal/National Coalition"],
+          "range": ["#D43434", "#054a91"]
+        }},
+        "tooltip": [
+          {"field": "Party"},
+          {"field": "Proportion", "format": ".2%", "title": "Percentage"}
+        ]
       }
-    ],
-    "mark": {"type": "arc", "innerRadius": 50},
-    "encoding": {
-      "theta": {
-        "field": "Percentage",
-        "type": "quantitative"
-      },
-      "color": {"field": "Party", "type": "nominal",
-      "scale": {
-        "domain": ["Australian Labor Party", "Liberal/National Coalition"],
-        "range": ["#D43434", "#054a91"]
-      }},
-      "tooltip": [
-        {"field": "Party"},
-        {"field": "Percentage", "format": ".2%"}
-      ]
     },
-    "view": {"stroke": null}
-  }
+    {
+      "mark": {"type": "text", "radius": 75, "color": "white"},
+      "encoding": {
+        "text": { "field": "Proportion", "format": ".2%" }
+      }
+    }
+  ]
+}
