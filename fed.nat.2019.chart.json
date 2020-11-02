@@ -63,7 +63,7 @@
         }]
       },
       {
-        "name": "centerY", "value": -31,
+        "name": "centerY", "value": -25,
         "on": [{
           "events": {"signal": "delta"},
           "update": "clamp(angles[1] + delta[1], -41, -12)"

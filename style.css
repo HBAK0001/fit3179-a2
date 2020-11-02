@@ -1,77 +1,69 @@
 .dashboard {
-    padding: 0vh 1vw;
-    width: 97vw;
-    height: 98vh;
+    width: 100vw;
+    height: 100vh;
     display: grid;
     grid-template-areas: 
         "title title"
-        "map breakdown"
-        "map breakdown"
-        "division breakdown";
-    grid-template-columns: 58vw 40vw;
-    grid-template-rows: 8vh 24vh 32vh 36vh;
+        "map desc"
+        "map seats"
+        "division prefs";
+    grid-template-columns: 60vw 40vw;
+    grid-template-rows: 10% 20% 30% 40%;
 }
 
 .title-container {
     grid-area: title;
     border-bottom: 1px solid black;
+    padding: 0 0 0 2vw;
 }
 
 .map-container {
     grid-area: map;
     border-right: 1px solid black;
+    padding: 2vh 0 0 2vw;
 }
 
 .division-container {
     grid-area: division;
     border-right: 1px solid black;
-}
-
-.overview-container {
-    grid-area: overview;
+    padding: 0 0 0 2vw;
 }
 
 .overview-grid {
     display: grid;
     grid-template-columns: 50% 50%;
-}
-
-.breakdown-container {
-    grid-area: breakdown;
-    padding: 1vh 1vw;
-}
-
-.breakdown-container h3, .breakdown-container h4 {
-    margin: 0;
-}
-
-.breakdown-grid {
     height: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
-    grid-template-rows: 3vh 21.5vh 2.5vh 30vh 3vh 28vh;
-    grid-template-areas:
-        "headings-1 headings-1"
-        "desc nat-bar"
-        "headings-0 headings-0"
-        "states-bar states-bar"
-        "headings-2 headings-2"
-        "nat-bar2 nat-bar2";
 }
+
+.desc-container {
+    grid-area: desc;
+    padding: 0 2vw 0 2vw;
+}
+
+.seats-container {
+    grid-area: seats;
+    padding: 0 2vw 0 2vw;
+}
+
+.prefs-container {
+    grid-area: prefs;
+    padding: 0 2vw 0 2vw;
+}
+
 
 body {
     background-color: #efefef;
 }
 
-@media (max-width: 1500px) {
-    p {
-        font-size: 12px;
-        color: red;
-    }
+.title-centre {
+    display: grid;
+    grid-template-areas:
+        "top-space"
+        "title"
+        "bot-space";
+    grid-template-rows: auto 2em auto;
 }
 
-@media (min-width: 1500px) {
-    p {
-        font-size: 16px;
-    }
+.title-centre h1 {
+    margin: 0;
 }
