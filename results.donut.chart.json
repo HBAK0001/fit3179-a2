@@ -22,7 +22,7 @@
       "color": {"field": "Party", "type": "nominal",
       "scale": {
         "domain": ["Australian Labor Party", "Liberal/National Coalition"],
-        "range": ["red", "blue"]
+        "range": ["#D43434", "#054a91"]
       }}
     },
     "view": {"stroke": null}

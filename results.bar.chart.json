@@ -61,7 +61,7 @@
                         "NCP", "IMO", "FLUX"],
               "range": ["#D43434", "#054a91", "#3e7cb1", "#3f7d20", "#054a91",
                         "#343434", "darkblue", "#44cf6c", "yellow", "#fa9f42", "#9E9D90",
-                        "darkorange", "brown", "crimson", "navy", "#721817", "orangered",
+                        "#af6d2c", "brown", "crimson", "navy", "#721817", "orangered",
                         "midnightblue", "deepskyblue", "mediumblue", "gold", "goldenrod",
                         "steelblue", "teal", "black", "darkcyan", "purple", "midnightblue",
                         "darkblue", "lightyellow", "firebrick", "firebrick", "grey", "grey",
