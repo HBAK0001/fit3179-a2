@@ -146,6 +146,7 @@
         "fillColor": "#fff",
         "orient": "top-left",
         "title": "Elected Party",
+        "padding": 3,
         "encode": {
           "symbols": {
             "update": {
@@ -165,7 +166,7 @@
           "enter": {
             "strokeWidth": {"value": 1},
             "stroke": {"value": "#fff"},
-            "fill": {"value": "#b3ecff"}
+            "fill": {"value": "#def7ff"}
           }
         },
         "transform": [
