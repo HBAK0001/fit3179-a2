@@ -15,32 +15,38 @@
     </head>
     <body>
         <div class="dashboard">
-            <div class="title-container title-centre"><h1 style="grid-area: title">2019 Australian Federal Election Results Explorer (House of Respresentatives)</h1></div>
+            <div class="title-container title-centre"><h1 style="grid-area: title">2019 Australian Federal Election Results Explorer (House of Representatives)</h1></div>
             <!-- Left Column -->
             <div class="map-container" ><div id="vis-main" style="width: 58vw; height: 100%"></div></div>
             <div class="division-container">
                 <h3 id="electorate-title">Click on a division to view its data!</h3>
-                <div class="overview-grid" style="height: 80%">
+                <div class="overview-grid" style="height: 60%">
                     <div style="overflow-y: scroll; height: 100%">
                         <div id="vis-bar" style="width: 100%; height: 100%"></div>
                     </div>
-                    <div id="vis-donut" style="width: 100%; height: 100%"></div>
+                    <div id="vis-donut" style="width: 100%; height: 100%; padding-left: 2vw"></div>
+                </div>
+                <div style="margin-top: 3%">
+                    <p>Election data was sourced from the <a href="https://results.aec.gov.au/">AEC Tally Room</a>.</p>
+                    <p>This page was produced by Hayden Baker for FIT3179 Assignment 3 at Monash University.</p>
                 </div>
             </div>
             <!-- Right Column -->
             <div class="desc-container">
-                <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>The 2019 Australian Federal Election was held on 2019/05/18. Up for election were all 151 seats in the House of Representatives,
+                    as well as 40 of the 76 senate seats. As a result of this election, the incumbent government remained in power for a third term by securing a
+                    majority of the seats in the House of Representatives which can be seen in the heatmap below.</p>
+                <p>Using the rest of this page, you can view
+                    the election results broken down into a variety of categories. Try clicking a division on the map to the left to view the first preferences and
+                    the two-party preferred comparison.
+                </p>
             </div>
             <div class="seats-container">
-                <h3>First Preference Votes by Demographic</h3>
+                <h3>Distribution of Seats by Party</h3>
                 <div id="vis-heatmap" style="width: 100%; height: 80%"></div>
             </div>
             <div class="prefs-container" style="height: 80%">
-                <h3>First Preference Votes by Demographic</h3>
+                <h3>First Preference Votes per Party by Demographic</h3>
                 <div id="vis-demo" style="overflow-x: scroll; height: 100%; width: 100%"></div>
             </div>
         </div>
