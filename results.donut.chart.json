@@ -38,6 +38,16 @@
           {"field": "Proportion", "format": ".2%", "title": "Percentage"}
         ]
       }
+    },
+    {
+      "mark": {"type": "text",
+        "radius": {
+          "expr": "datum.PartyAb == 'ALP' ? -75 : 75"
+        },
+        "color": "white"},
+      "encoding": {
+        "text": { "field": "Proportion", "format": ".2%" }
+      }
     }
   ]
 }
