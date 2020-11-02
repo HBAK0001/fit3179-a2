@@ -30,6 +30,9 @@
         "scale": {
           "domain": ["Australian Labor Party", "Liberal/National Coalition"],
           "range": ["#D43434", "#054a91"]
+        },
+        "legend": {
+          "orient": "left"
         }},
         "tooltip": [
           {"field": "Party"},
