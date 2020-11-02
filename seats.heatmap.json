@@ -1,46 +1,78 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
-    "description": "A simple donut chart with embedded data.",
-    "data": {
-      "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.json",
+  "description": "A simple donut chart with embedded data.",
+  "data": {
+    "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
+  },
+  "height": "container",
+  "mark": {"type": "rect"},
+  "transform": [{"filter": "datum.National > 0"},
+  {
+    "fold": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
+    "as": ["state", "seats"]
+  },
+  {
+    "calculate": "datum.Party == 'Liberal' || datum.Party == 'Liberal National Party' || datum.Party == 'The Nationals'",
+    "as": "InCoalition"
+  },
+  {
+    "calculate": "datum.InCoalition ? 'Liberal National Coalition' : datum.Party",
+    "as": "Party Group"
+  },
+  {
+    "joinaggregate": [
+      {
+        "op": "sum",
+        "field": "seats"
+      }
+    ],
+    "groupby": ["state"]
+  },
+  {
+    "calculate": "round(datum.seats / datum.sum_seats * 100)",
+    "as": "ProportionStateSeats"
+  },
+  {
+    "joinaggregate": [
+      {
+        "op": "sum",
+        "field": "ProportionStateSeats"
+      }
+    ],
+    "groupby": ["Party Group", "state"]
+  }],
+  "encoding": {
+    "x": {
+      "field": "state", "title": "State/Territory"
     },
-    "mark": {"type": "rect"},
-    "transform": [{"filter": "datum.National > 0"},
-    {
-      "fold": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
-      "as": ["state", "seats"]
+    "y": {
+      "field": "Party Group"
     },
-    {
-      "calculate": "datum.Party == 'Liberal' || datum.Party == 'Liberal National Party' || datum.Party == 'The Nationals'",
-      "as": "InCoalition"
-    },
-    {
-      "calculate": "datum.InCoalition ? 'Liberal National Coalition' : datum.Party",
-      "as": "Party Group"
-    }],
-    "encoding": {
-      "x": {
-        "field": "state", "title": "State/Territory"
+    "color": {
+      "field": "sum_ProportionStateSeats",
+      "type": "quantitative",
+      "bin": {
+        "anchor": 1,
+        "step": 9,
+        "maxbins": 7
       },
-      "y": {
-        "field": "Party Group"
-      },
-      "color": {
-        "field": "seats",
-        "type": "quantitative",
-        "bin": {
-          "anchor": 1,
-          "base": 2
-        },
-        "title": "Seats"
-      },
-      "tooltip": [
-        {"field": "Party Group", "title": "Party"},
-        {"field": "seats", "title": "Seats"}
-      ]
+      "title": "State Seat %",
+      "scale": {
+        "scheme": "goldgreen",
+        "bins": [0, 10, 30, 50, 110]
+      }
     },
-    "config": {
-      "axis": {"grid": true, "tickBand": "extent"}
+    "tooltip": [
+      {"field": "Party Group", "title": "Party"},
+      {"field": "seats", "title": "Seats"},
+      {"field": "sum_ProportionStateSeats", "title": "State Seat %"}
+    ]
+  },
+  "config": {
+    "axis": {"grid": true, "tickBand": "extent"},
+    "legend": {
+      "gradientLength": 140
     }
   }
-    
+}
+  
