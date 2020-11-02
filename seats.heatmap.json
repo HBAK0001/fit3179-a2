@@ -8,7 +8,7 @@
   "mark": {"type": "rect"},
   "transform": [{"filter": "datum.National > 0"},
   {
-    "fold": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT"],
+    "fold": ["NSW", "VIC", "QLD", "WA", "SA", "TAS", "ACT", "NT", "National"],
     "as": ["state", "seats"]
   },
   {
@@ -43,7 +43,8 @@
   }],
   "encoding": {
     "x": {
-      "field": "state", "title": "State/Territory"
+      "field": "state", "title": "State/Territory",
+      "sort": ["NSW", "VIC", "QLD", "WA", "SA", "ACT", "NT", "TAS", "National"]
     },
     "y": {
       "field": "Party Group"
