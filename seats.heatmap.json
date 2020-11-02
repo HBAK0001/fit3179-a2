@@ -5,6 +5,7 @@
     "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
   },
   "height": "container",
+  "width": "container",
   "title": "Seat Distribution",
   "mark": {"type": "rect"},
   "transform": [{"filter": "datum.National > 0"},
