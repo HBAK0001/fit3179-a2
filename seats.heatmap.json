@@ -5,6 +5,7 @@
     "url": "https://hbak0001.github.io/fit3179-a2/data/fed-party-seat-counts-2019.csv"
   },
   "height": "container",
+  "title": "Seat Distribution",
   "mark": {"type": "rect"},
   "transform": [{"filter": "datum.National > 0"},
   {
@@ -44,7 +45,12 @@
   "encoding": {
     "x": {
       "field": "state", "title": "State/Territory",
-      "sort": ["NSW", "VIC", "QLD", "WA", "SA", "ACT", "NT", "TAS", "National"]
+      "sort": ["NSW", "VIC", "QLD", "WA", "SA", "ACT", "NT", "TAS", "National"],
+      "axis": {
+        "labelFontWeight": {
+          "expr": "datum.label == 'National' ? 'bold' : 'normal'"
+        }
+      }
     },
     "y": {
       "field": "Party Group"
@@ -70,7 +76,7 @@
     ]
   },
   "config": {
-    "axis": {"grid": true, "tickBand": "extent"},
+    "axis": {"grid": true, "tickBand": "extent", "labelFontSize": 11},
     "legend": {
       "gradientLength": 140
     }
