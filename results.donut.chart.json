@@ -13,7 +13,7 @@
         "as": ["Party", "Percentage"]
       }
     ],
-    "mark": {"type": "arc", "innerRadius": 50, "tooltip": true},
+    "mark": {"type": "arc", "innerRadius": 50},
     "encoding": {
       "theta": {
         "field": "Percentage",
@@ -23,7 +23,11 @@
       "scale": {
         "domain": ["Australian Labor Party", "Liberal/National Coalition"],
         "range": ["#D43434", "#054a91"]
-      }}
+      }},
+      "tooltip": [
+        {"field": "Party"},
+        {"field": "Percentage", "format": ".2%"}
+      ]
     },
     "view": {"stroke": null}
   }

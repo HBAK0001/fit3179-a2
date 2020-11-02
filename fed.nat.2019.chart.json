@@ -95,6 +95,11 @@
         ]
       },
       {
+        "name": "demo",
+        "url": "https://hbak0001.github.io/fit3179-a2/data/fed-house-nom-div-2019.csv",
+        "format": {"type": "csv"}
+      },
+      {
         "name": "world",
         "url": "https://hbak0001.github.io/fit3179-a2/geoJSON/fed/fed-nat-2018-topo.json",
         "format": {
@@ -108,6 +113,13 @@
             "key": "DivisionNm",
             "fields": ["properties.Sortname"],
             "values": ["StateAb", "Surname", "GivenNm", "PartyAb", "PartyNm", "TotalVotes"]
+          },
+          {
+            "type": "lookup",
+            "from": "demo",
+            "key": "DivisionNm",
+            "fields": ["properties.Sortname"],
+            "values": ["Demographic"]
           }
         ]
       },
@@ -171,7 +183,7 @@
                 "field": "PartyNm"},
             "tooltip": [
               {
-                "signal": "{'Division Name': datum.properties.Sortname, 'Party Name': datum['PartyNm']}"
+                "signal": "{'State': datum.StateAb, 'Division Name': datum.properties.Sortname, 'Demographic': datum.Demographic, 'Party Name': datum['PartyNm']}"
               }
             ]
           }
