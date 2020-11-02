@@ -85,7 +85,7 @@
         },
         "tooltip": [
           {"field": "PartyNm", "title": "Party Name"},
-          {"field": "TotalVotes", "aggregate": "sum",
+          {"field": "TotalVotes", "aggregate": "sum", "format": ",",
             "title": "First Preference Votes"}
         ],
         "color": {

@@ -47,7 +47,7 @@
         "encoding": {
           "tooltip": [
             { "field": "PartyNm", "type": "ordinal", "title": "Party Name"},
-            { "field": "TotalVotes", "aggregate": "sum",
+            { "field": "TotalVotes", "aggregate": "sum", "format": ",",
               "type": "quantitative", "title": "First Preference Votes"
             }
           ],
