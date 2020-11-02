@@ -8,7 +8,6 @@ var spec_vic = "https://HBAK0001.github.io/fit3179-a2/fed.nat.2019.chart.json";
 vegaEmbed('#vis-main', spec_vic).then(function(result) {
     result.view.addEventListener('click', function(event, item){
         displayElectorateInfo(item);
-        
     });
     window.dispatchEvent(new Event('resize'));
 }).catch(console.error);
@@ -32,7 +31,7 @@ vegaEmbed('#vis-demo', spec_demo).then(function(result) {
 
 var spec_heatmap = "https://HBAK0001.github.io/fit3179-a2/seats.heatmap.json"
 vegaEmbed('#vis-heatmap', spec_heatmap).then(function(result) {
-    console.log(result)
+    
 }).catch(console.error);
 
 /*

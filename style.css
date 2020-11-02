@@ -13,19 +13,16 @@
 
 .title-container {
     grid-area: title;
-    border-bottom: 1px solid black;
     padding: 0 0 0 2vw;
 }
 
 .map-container {
     grid-area: map;
-    border-right: 1px solid black;
     padding: 2vh 0 0 2vw;
 }
 
 .division-container {
     grid-area: division;
-    border-right: 1px solid black;
     padding: 0 0 0 2vw;
 }
 
@@ -67,4 +64,15 @@ body {
 
 .title-centre h1 {
     margin: 0;
+}
+
+p {
+    font-size: 14px;
+    margin: 7px 0px;
+}
+
+span.informal {
+    color: #fff;
+    background-color: #343434;
+    padding: 1px 2px 1px 2px;
 }
