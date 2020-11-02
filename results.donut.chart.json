@@ -7,7 +7,11 @@
   "background": "#efefef",
   "height": "container",
   "title": "Two Party Preferred Vote",
-  "transform": [{
+  "transform": [
+    {
+      "filter": "datum.DivisionNm == 'Mallee'"
+    },
+    {
       "fold": ["Liberal/National Coalition", "Australian Labor Party"],
       "as": ["Party", "Percentage"]
     },
@@ -17,17 +21,15 @@
     }
   ],
   "view": {"stroke": null},
-  "encoding": {
-    "theta": {
-          "field": "Percentage",
-          "type": "quantitative",
-          "stack": true
-        }
-  },
   "layer": [
     {
       "mark": {"type": "arc", "innerRadius": 50},
       "encoding": {
+        "theta": {
+            "field": "Percentage",
+            "type": "quantitative",
+            "stack": true
+        },
         "color": {"field": "Party", "type": "nominal",
         "scale": {
           "domain": ["Australian Labor Party", "Liberal/National Coalition"],
@@ -41,10 +43,11 @@
     },
     {
       "mark": {"type": "text",
-        "radius": {
-          "expr": "datum.PartyAb == 'ALP' ? -75 : 75"
-        },
-        "color": "white"},
+      "theta": {
+        "expr": "datum.PartyAb == 'ALP' ? (datum.Party == 'Australian Labor Party' ? 2*PI*datum.Proportion - PI/8 : -2*PI*datum.Proportion + PI/8) : (datum.Party == 'Australian Labor Party' ? 2*PI*datum.Proportion - PI/8 : -2*PI*datum.Proportion + PI/8)"
+      },
+      "radius": 75,
+      "color": "white"},
       "encoding": {
         "text": { "field": "Proportion", "format": ".2%" }
       }
